@@ -1,0 +1,309 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Couleur de fond gris clair */
+    margin: 0;
+    padding: 20px;
+}
+
+.container-btn{
+    width: 100%;
+    margin: 40px 0;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 7px -2px black;
+    background-color: #17a2b8;
+}
+
+.btn:hover{
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+#btn-album{
+
+}
+
+#btn-livre{
+
+}
+
+#btn-film{
+
+}
+
+/* Conteneur principal */
+.container-array {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fond blanc */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center; /* Centrer le contenu */
+}
+
+/* Tableaux */
+.array {
+    margin: 20px 0; /* Espace vertical entre les tableaux */
+}
+
+table {
+    width: 90%; /* Réduire la largeur pour le centrage */
+    margin: 20px auto; /* Centrer le tableau */
+    border-collapse: collapse;
+    display: block;
+    background-color: #f8f9fa; /* Fond légèrement gris pour les tableaux */
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+    border-collapse: collapse;
+}
+
+/* En-tête du tableau */
+thead {
+    background-color: #17a2b8; /* Couleur teal */
+    color: white;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+tbody{
+    display: block;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; /* Bordure légère en bas des cellules */
+}
+
+/* Styles des cellules */
+td {
+    color: #495057; /* Couleur des textes des cellules */
+}
+
+table tr:not(thead tr):hover {
+    background-color: #e2e6ea; /* Couleur de survol pour les lignes */
+}
+
+/* Boutons */
+input[type="submit"], .btn-delete {
+    background-color: #ffc107; /* Couleur jaune pour les boutons */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input[type="submit"]:hover {
+    transition: 200ms ease-in-out;
+    background-color: #e0a800; /* Couleur au survol */
+}
+
+input[value="Supprimer"]:nth-child(2), .btn-delete {
+    transition: 200ms ease-in-out;
+    background-color: #dc3545; /* Couleur rouge pour le bouton Supprimer */
+}
+
+input[value="Supprimer"]:nth-child(2):hover, .btn-delete:hover {
+    transition: 200ms ease-in-out;
+    background-color: #535353; /* Couleur au survol pour Supprimer */
+}
+
+/* Titres de section */
+h2 {
+    text-align: center;
+    color: #333; /* Couleur des titres */
+    margin-bottom: 20px; /* Espacement en bas des titres */
+}
+
+/* Styles pour les messages de disponibilité */
+td:nth-child(3) {
+    font-weight: bold;
+}
+
+td:nth-child(3):contains('Disponible') {
+    color: #28a745; /* Vert pour "Disponible" */
+}
+
+td:nth-child(3):contains('Non disponible') {
+    color: #dc3545; /* Rouge pour "Non disponible" */
+}
+
+.popup, .overlay {
+    display: none;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+}
+.popup .popup-header {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.popup-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Formulaire */
+.content_body {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title_form {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.nav li {
+    margin: 0 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Input and Label Styling */
+.content_input {
+    margin-bottom: 15px;
+}
+
+.label_form {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input_form,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input_form:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit_form {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit_form:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message Styling */
+.content_input_form_content_message_erreur {
+    position: relative;
+}
+
+.content_message_erreur {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #d9534f;
+}
+
+.message_erreur {
+    margin: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .content_body {
+        padding: 15px;
+    }
+
+    .title_form {
+        font-size: 20px;
+    }
+
+    .input_form,
+    select,
+    .submit_form {
+        font-size: 16px;
+    }
+}
